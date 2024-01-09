@@ -1,51 +1,75 @@
-.front {
-  width: 100%;
-  max-height: 800px;
+.front-container {
+  width: 70%;
+  height: 500px;
+  margin: 100px;
+  padding: 30px;
   overflow: hidden;
   position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.682);
 
-  .welcome {
-    background-color: rgba(255, 255, 255, 0.682);
-    margin: 50px;
-    height: 500px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1;
+    height: 70%;
+    left: 50%;
+    border-left: 2px solid var(--color-4); /* Ändra färg och tjocklek enligt dina önskemål */
+    transform: translateX(-50%);
+  }
+
+  .text {
+    margin: 90px;
     width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  p {
+    text-align: start;
+    line-height: 25px;
   }
 }
 
 .text-focus-in {
-	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+.text-focus-in:nth-child(2) {
+  -webkit-animation: text-focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 @-webkit-keyframes text-focus-in {
   0% {
     -webkit-filter: blur(12px);
-            filter: blur(12px);
+    filter: blur(12px);
     opacity: 0;
   }
   100% {
     -webkit-filter: blur(0px);
-            filter: blur(0px);
+    filter: blur(0px);
     opacity: 1;
   }
 }
 @keyframes text-focus-in {
   0% {
     -webkit-filter: blur(12px);
-            filter: blur(12px);
+    filter: blur(12px);
     opacity: 0;
   }
   100% {
     -webkit-filter: blur(0px);
-            filter: blur(0px);
+    filter: blur(0px);
     opacity: 1;
   }
 }
-
